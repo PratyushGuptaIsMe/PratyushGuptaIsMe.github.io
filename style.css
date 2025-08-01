@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,116.4,800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --MAIN-RADIALWHITE: whitesmoke;
+    --MAIN-RADIALCOLOR: rgb(81, 72, 72);
+    --COOL-WHITE: whitesmoke;
+
+    --SIDEBARCOLOR: #7b525298;
+    --FOOTERCOLOR: rgb(1, 2, 2);
+    --HEADERCOLOR: rgb(91, 23, 23);
+    --NAVCOLOR: rgb(161, 109, 161);
+
+    --FOOTER-FONT-COLOR: var(--COOL-WHITE);
+    --NAV-FONT-COLOR: rgb(119, 53, 53);
+    --NAV-FONT-COLOR-HOVERFOCUS: rgb(31, 21, 21);
+    --HEADER-FONT-COLOR: rgb(218, 168, 168);
+    --MAIN-FONT-COLOR: rgb(0, 0, 0);
+    --FIGCAP-HIGHLIGHT: rgb(80, 255, 255);
+    --FOCUS-HIGHLIGHT: rgb(162, 255, 0);
+    --SIDEBAR-HOVERFOCUS: rgb(235, 215, 158);
+
+    --FIGURECAPTION-FONT-SIZE: 1rem;
+    --DEFAULT-FONT-SIZE: 1.5rem;
+    --HEADER-FONTSIZE: 2.4rem;
+    --FONT-FAMILY: 'Courier New', Courier, monospace;
+    --XL-BOLD-FONTWEIGHT: 900; 
+    --TEXT-INDENT:4%;
+    --HEADERFONT: "Nunito Sans", sans-serif;
+}
+
+.floatright{
+    float: right;
+}
+
+p{
+    text-indent: var(--TEXT-INDENT);
+}
+
+img{
+    display: block;
+}
+
+.body{
+    background-color: var(--MAIN-RADIALCOLOR);
+    font-family: var(--FONT-FAMILY);
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 0.65fr 0.3fr repeat(5, 1fr) 0.55fr;
+    grid-template-columns: 0.5fr repeat(7, 1fr);
+    grid-template-areas: 
+    "h h h h h h h h"
+    "n n n n n n n n"
+    "s m m m m m m m"
+    "s m m m m m m m"
+    "s m m m m m m m"
+    "s m m m m m m m"
+    "s m m m m m m m"
+    "f f f f f f f f";
+}
+
+.header{
+    background-color: var(--HEADERCOLOR);
+    color: var(--HEADER-FONT-COLOR);
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--HEADER-FONTSIZE);
+    font-weight: var(--XL-BOLD-FONTWEIGHT);
+    font-family: var(--HEADERFONT);
+    padding:0.1em;
+    text-decoration: 5px underline;
+}
+
+.nav{
+    background-color: var(--NAVCOLOR);    
+    color: var(--NAV-FONT-COLOR);
+    grid-area: n;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: var(--DEFAULT-FONT-SIZE);
+    padding-bottom: 0.1%;
+    padding-top: 0.2%;
+}
+
+.nav a, .nav a:visited{
+    color: var(--NAV-FONT-COLOR);
+}
+
+.nav a:hover, .nav a:focus{
+    color: var(--NAV-FONT-COLOR-HOVERFOCUS);
+}
+
+.nav a:focus{
+    background-color: var(--FOCUS-HIGHLIGHT);
+}
+
+.nav a:active{
+    color: var(--NAV-FONT-COLOR);
+    background-color: rgba(1, 2, 2, 0);
+}
+
+.main{
+    background-color: var(--MAIN-RADIALCOLOR);
+    background-image: radial-gradient(var(--MAIN-RADIALWHITE), var(--MAIN-RADIALCOLOR));
+    border: 1px solid black;
+    padding: 1%;
+    overflow-y: scroll;
+    grid-area: m;
+    color: var(--MAIN-FONT-COLOR);
+    
+    display: grid;    
+}
+
+.fig1cap{
+    font-size: var(--FIGURECAPTION-FONT-SIZE);
+}
+
+body .main div span{
+    background-color: var(--FIGCAP-HIGHLIGHT);
+    margin-left: 20px;
+}
+
+.sidebar{
+    background-color: var(--SIDEBARCOLOR);    
+    grid-area: s;
+    opacity: 80%;
+}
+
+.sidebar a{
+    display:block;
+    border-radius: 20%;
+}
+
+.sidebar a:hover, .sidebar a:focus{
+    background-color: var(--SIDEBAR-HOVERFOCUS);
+}
+
+.sidebar a:visited, .sidebar a{
+    opacity: 85%;
+}  
+
+.sidebar a:active{
+    opacity: 100%;
+    filter: brightness(0.1%);
+}
+
+.footer{
+    background-color: var(--FOOTERCOLOR);
+    grid-area: f;
+    color: var(--FOOTER-FONT-COLOR);
+}
+
