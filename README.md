@@ -1,2 +1,2 @@
 # PratyushGuptaIsMe.github.io
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+MSA SUCKS
