@@ -7,6 +7,14 @@
     scroll-behavior: smooth;
 }
 
+p{
+    text-indent: var(--TEXT-INDENT);
+}
+
+img{
+    display: block;
+}
+
 :root{
     --MAIN-RADIALWHITE: whitesmoke;
     --MAIN-RADIALCOLOR: rgb(81, 72, 72);
@@ -39,12 +47,8 @@
     float: right;
 }
 
-p{
-    text-indent: var(--TEXT-INDENT);
-}
-
-img{
-    display: block;
+.displaynone{
+    display: none;
 }
 
 .body{
