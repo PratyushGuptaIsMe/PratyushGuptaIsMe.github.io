@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,116.4,800&display=swap');
 
+
+/* ||   RESET  || */
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -14,6 +17,8 @@ p{
 img{
     display: block;
 }
+
+/* ||   VARIABLES   || */
 
 :root{
     --MAIN-RADIALWHITE: whitesmoke;
@@ -43,13 +48,7 @@ img{
     --HEADERFONT: "Nunito Sans", sans-serif;
 }
 
-.floatright{
-    float: right;
-}
-
-.displaynone{
-    display: none;
-}
+/* ||   PROPERTIES   || */
 
 .body{
     background-color: var(--MAIN-RADIALCOLOR);
@@ -162,5 +161,15 @@ body .main div span{
     background-color: var(--FOOTERCOLOR);
     grid-area: f;
     color: var(--FOOTER-FONT-COLOR);
+}
+
+/* ||   UTILITY CLASSES   || */
+
+.floatright{
+    float: right;
+}
+
+.displaynone{
+    display: none;
 }
 
