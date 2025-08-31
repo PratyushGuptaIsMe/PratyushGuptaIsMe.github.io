@@ -33,7 +33,9 @@ img{
     --FOOTER-FONT-COLOR: var(--COOL-WHITE);
     --NAV-FONT-COLOR: rgb(119, 53, 53);
     --NAV-FONT-COLOR-HOVERFOCUS: rgb(31, 21, 21);
-    --HEADER-FONT-COLOR: rgb(218, 168, 168);
+    --HEADER-FONT-COLOR: rgb(214, 169, 169);
+    --PRATYUSHGUPTAISME-LINK-FONT-COLOR: rgb(161, 118, 118);
+    --PRATYUSHGUPTAISME-HOVERFOCUS-FONT-COLOR: rgba(160, 125, 125, 0.827);
     --MAIN-FONT-COLOR: rgb(0, 0, 0);
     --FIGCAP-HIGHLIGHT: rgb(80, 255, 255);
     --FOCUS-HIGHLIGHT: rgb(162, 255, 0);
@@ -82,6 +84,17 @@ img{
     font-family: var(--HEADERFONT);
     padding:0.1em;
     text-decoration: 5px underline;
+}
+
+.PratyushGuptaIsMeLink, .PratyushGuptaIsMeLink:visited{
+    text-decoration: none;
+    color: var(--PRATYUSHGUPTAISME-LINK-FONT-COLOR);
+    text-decoration: 5px underline;
+}
+
+.PratyushGuptaIsMeLink:hover, .PratyushGuptaIsMeLink:focus{
+    cursor: pointer;
+    color: var(--PRATYUSHGUPTAISME-HOVERFOCUS-FONT-COLOR);
 }
 
 .nav{
