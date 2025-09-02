@@ -104,7 +104,7 @@ img{
     display: flex;
     justify-content: space-evenly;
     font-size: var(--DEFAULT-FONT-SIZE);
-    padding-bottom: 0.1%;
+    padding-bottom: 0.2%;
     padding-top: 0.2%;
 }
 
@@ -149,7 +149,7 @@ body .main div span{
 .sidebar{
     background-color: var(--SIDEBARCOLOR);    
     grid-area: s;
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 .sidebar a{
@@ -162,12 +162,16 @@ body .main div span{
 }
 
 .sidebar a:visited, .sidebar a{
-    opacity: 85%;
+    opacity: 0.85;
 }  
 
 .sidebar a:active{
-    opacity: 100%;
-    filter: brightness(0.1%);
+    opacity: 1;
+    filter: brightness(110%);
+}
+
+.sidebar a:first-child{
+    margin-top: 30%;
 }
 
 .footer{
@@ -185,4 +189,3 @@ body .main div span{
 .displaynone{
     display: none;
 }
-
