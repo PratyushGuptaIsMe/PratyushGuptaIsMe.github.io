@@ -140,7 +140,7 @@ img{
     display: grid;    
 }
 
-.fig1cap{
+.figcap{
     background-color: var(--FIGCAP-HIGHLIGHT);
     font-size: var(--FIGURECAPTION-FONT-SIZE);
 }
