@@ -11,6 +11,7 @@
 
 p{
     text-indent: var(--TEXT-INDENT);
+    margin-bottom: var(--PARAGRAPH-GAP);
 }
 
 img{
@@ -20,6 +21,8 @@ img{
 /* ||   VARIABLES   || */
 
 :root{
+    --PARAGRAPH-GAP: 2px;
+
     --MAIN-RADIALWHITE: whitesmoke;
     --MAIN-RADIALCOLOR: rgb(81, 72, 72);
     --COOL-WHITE: whitesmoke;
@@ -39,6 +42,7 @@ img{
     --FIGCAP-HIGHLIGHT: rgb(80, 255, 255);
     --FOCUS-HIGHLIGHT: rgb(162, 255, 0);
     --SIDEBAR-HOVERFOCUS: rgb(235, 215, 158);
+    --MARGIN-ON-TOP-OF-MAIN-IMG: 0.7rem;
 
     --FIGURECAPTION-FONT-SIZE: 1rem;
     --DEFAULT-FONT-SIZE: 1.5rem;
@@ -137,12 +141,20 @@ img{
 }
 
 .fig1cap{
+    background-color: var(--FIGCAP-HIGHLIGHT);
     font-size: var(--FIGURECAPTION-FONT-SIZE);
 }
 
-body .main div span{
-    background-color: var(--FIGCAP-HIGHLIGHT);
+.figcaption_span_dummyImg{
     margin-left: 20px;
+}
+
+.figcaption_span_amongusImg{
+    margin-right: 20px;
+}
+
+.main_image{
+    margin-top: var(--MARGIN-ON-TOP-OF-MAIN-IMG);
 }
 
 .sidebar{
@@ -185,6 +197,14 @@ body .main div span{
     float: right;
 }
 
+.floatleft{
+    float: left;
+}
+
 .displaynone{
     display: none;
+}
+
+.boldify{
+    font-weight: 900;
 }
