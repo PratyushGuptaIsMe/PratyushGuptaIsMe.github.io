@@ -9,3 +9,12 @@ function insertImgToTag(id, path, w, h){
     document.getElementById(id).style.width = w;
     document.getElementById(id).style.height = h;
 }
+
+function log(i){
+    console.log(i);
+}
+
+function animation_loop(){
+    online = navigator.onLine;
+    requestAnimationFrame(animation_loop);
+}
