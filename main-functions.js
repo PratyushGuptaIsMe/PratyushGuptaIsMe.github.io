@@ -18,3 +18,7 @@ function animation_loop(){
     online = navigator.onLine;
     requestAnimationFrame(animation_loop);
 }
+
+function doesElementExist(id){
+    return document.getElementById(id) !== null;
+}
