@@ -1,8 +1,10 @@
 # PratyushGuptaIsMe.github.io
-[Website](https://pratyushguptaisme.github.io/)  -->  [https://pratyushguptaisme.github.io/](https://pratyushguptaisme.github.io/)
 
-Email me at **pratyushngupta@gmail.com** or **pratyush.gupta102@cfbmail.com** (school email) if you want to contact/help me.
+Visit my [website](https://pratyushguptaisme.github.io/) ---> [https://pratyushguptaisme.github.io/](https://pratyushguptaisme.github.io/).
 
-Discord - **nimv001**.
+**Contact:**  
+- Email: pratyushngupta@gmail.com  
+- School Email: pratyush.gupta102@cfbmail.com  
+- Discord: nimv001
 
-If you want, we can use something else to contact/talk like discord, google spaces, whatsapp, etc.
+Feel free to reach out via Discord, Google Spaces, WhatsApp, or other platforms if you prefer.
