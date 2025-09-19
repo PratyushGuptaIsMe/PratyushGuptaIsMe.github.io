@@ -2,13 +2,6 @@ import { Player } from "./player.js";
 import { YellowSkeleton, WhiteSkeleton } from "./enemies.js";
 import { Grass } from "./backgrounds.js";
 
-const CANVAS = document.getElementById("mainCanvas");
-const ctx = CANVAS.getContext("2d");
-const TCANVAS = document.getElementById("textCanvas");
-const text = TCANVAS.getContext("2d");
-CANVAS.width = 500;
-CANVAS.height = 500;
-
 class GAME{
     constructor(width, height){
         this.canvasWidth = width;
@@ -46,12 +39,12 @@ class GAME{
             newSkelly.hitbox.x + newSkelly.hitbox.w > this.Player.hitbox.x &&
             newSkelly.hitbox.y < this.Player.hitbox.y + this.Player.hitbox.h &&
             newSkelly.hitbox.y + newSkelly.hitbox.h > this.Player.hitbox.y
-            ){
-                newSkelly = "";
-                this.#spawnWhiteSkeleton();
-            }else{
-                this.allCurrentEnemies.push(newSkelly);
-            }
+        ){
+            newSkelly = "";
+            this.#spawnWhiteSkeleton();
+        }else{
+            this.allCurrentEnemies.push(newSkelly);
+        }
     }
     #spawnYellowSkeleton(){
         let newSkelly = new YellowSkeleton(this);
@@ -59,12 +52,12 @@ class GAME{
             newSkelly.hitbox.x + newSkelly.hitbox.w > this.Player.hitbox.x &&
             newSkelly.hitbox.y < this.Player.hitbox.y + this.Player.hitbox.h &&
             newSkelly.hitbox.y + newSkelly.hitbox.h > this.Player.hitbox.y
-            ){
-                newSkelly = "";
-                this.#spawnYellowSkeleton();
-            }else{
-                this.allCurrentEnemies.push(newSkelly);
-            }
+        ){
+            newSkelly = "";
+            this.#spawnYellowSkeleton();
+        }else{
+            this.allCurrentEnemies.push(newSkelly);
+        }
     }
     spawnEnemy(){
         let rand = Math.random();
@@ -93,12 +86,33 @@ class GAME{
             ){
                 if(enemy.attackAnimationRunning === false){
                     enemy.attackAnimationRunning = true;
-                    enemy.frameX = 0;
+                    if(enemy.dead === false){
+                        enemy.frameX = 0;
+                    }
                 }
             }else{
                 enemy.attackAnimationRunning = false;
             }
             
+            if( enemy.dead === false &&
+                enemy.markedForDeletion === false &&
+                this.Player.bulletActive === true &&
+                this.Player.projectileX < enemy.hitbox.x + enemy.hitbox.w &&
+                this.Player.projectileX + 25 > enemy.hitbox.x &&
+                this.Player.gunHeight < enemy.hitbox.y + enemy.hitbox.h &&
+                this.Player.gunHeight + 10 > enemy.hitbox.y
+            ){
+                enemy.dead = true;
+                enemy.frameX = 0;
+                enemy.frameAccelerator = 1.4;
+                enemy.maxFrameX = 13;
+                enemy.frameTimer = 0;
+            }
+
+        })
+
+        this.allCurrentEnemies = this.allCurrentEnemies.filter((enemy) => {
+            return enemy.markedForDeletion === false;
         })
     }
 
@@ -140,32 +154,36 @@ class GAME{
     }
 }
 
-window.addEventListener("load", () => {
-    let game = new GAME(CANVAS.width, CANVAS.height)
-    let l = 0;
-    animationLoop(l);
-    window.addEventListener("keydown", (event) => {
-        if(!game.keysArray.includes(event.key)){
-            game.keysArray.push(event.key);
-        }
-        if(event.key === "d"){
-            game.debugMode = !game.debugMode;
-        }
-    });
-    window.addEventListener("keyup", (event) => {
-        if(game.keysArray.includes(event.key)){
-            game.keysArray.splice(game.keysArray.indexOf(event.key), 1);
-        }
-    });
-
-    function animationLoop(t){
-        let deltaTime = t - l;
-        l = t;
-
-        ctx.clearRect(0, 0, CANVAS.width, CANVAS.height);
-        text.clearRect(0, 0, CANVAS.width, CANVAS.height);
-        game.update(deltaTime);
-        game.draw(ctx, text);
-        requestAnimationFrame(animationLoop);
+const CANVAS = document.getElementById("mainCanvas");
+const TCANVAS = document.getElementById("textCanvas");
+const ctx = CANVAS.getContext("2d");
+const text = TCANVAS.getContext("2d");
+CANVAS.width = 500;
+CANVAS.height = 500;
+let game = new GAME(CANVAS.width, CANVAS.height);
+let l = 0;
+animationLoop(l);
+window.addEventListener("keydown", (event) => {
+    if(!game.keysArray.includes(event.key)){
+        game.keysArray.push(event.key);
     }
-})
+    if(event.key === "d"){
+        game.debugMode = !game.debugMode;
+    }
+});
+window.addEventListener("keyup", (event) => {
+    if(game.keysArray.includes(event.key)){
+        game.keysArray.splice(game.keysArray.indexOf(event.key), 1);
+    }
+});
+
+function animationLoop(t){
+    let deltaTime = t - l;
+    l = t;
+
+    ctx.clearRect(0, 0, CANVAS.width, CANVAS.height);
+    text.clearRect(0, 0, CANVAS.width, CANVAS.height);
+    game.update(deltaTime);
+    game.draw(ctx, text);
+    requestAnimationFrame(animationLoop);
+}
