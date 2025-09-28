@@ -7,7 +7,7 @@ class Preloading{
 
         this.elementsToBeLoaded = document.getElementsByClassName(html_class);
         this.numberOfElements = this.elementsToBeLoaded.length;
-        this.percentLoadingProgress = 0;    //percent
+        this.percentLoadingProgress = 0;
         this.intervalID;
         this.#constructorSingleUseCode();
     }
