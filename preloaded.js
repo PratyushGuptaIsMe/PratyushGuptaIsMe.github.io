@@ -1,2 +1,2 @@
-let online = navigator.onLine;
+let online = navigator.onLine;  //bool onlineornot
 animation_loop();
