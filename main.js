@@ -4,7 +4,7 @@ LINKS.forEach((link) => {
     link.addEventListener("click", (e) => {
         if(navigator.onLine === false){
             e.preventDefault();
-            window.location.href = "offline.html";
+            window.location.href = "html/offline.html";
         }
     })
 })
