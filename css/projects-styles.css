@@ -1,0 +1,29 @@
+/* ||   RESET  || */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ||   UTILITY CLASSES   || */
+
+.displaynone{
+    display: none !important;
+}
+
+.displayblock {
+    display: block;
+}
+
+.boldify{
+    font-weight: 900;
+}
+
+.floatright{
+    float: right;
+}
+
+.floatleft{
+    float: left;
+}

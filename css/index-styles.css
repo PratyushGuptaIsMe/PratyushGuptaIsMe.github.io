@@ -1,4 +1,22 @@
+/* ||   IMPORTS  || */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,116.4,800&display=swap');
+
+@font-face {
+  font-family: 'Nimbus-Mono';
+  src: url('../Fonts/nimbus-mono/NimbusMono-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nimbus-Mono';
+  src: url('../Fonts/nimbus-mono/NimbusMono-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ||   RESET  || */
 
@@ -126,6 +144,18 @@ img{
 .nav a:active{
     color: var(--NAV-FONT-COLOR);
     background-color: rgba(1, 2, 2, 0);
+}
+
+.about-me-header{
+    font-family: 'Nimbus-Mono', 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    word-spacing: -6px;
+    text-decoration: underline;
+    width: 20%;
 }
 
 .main{
