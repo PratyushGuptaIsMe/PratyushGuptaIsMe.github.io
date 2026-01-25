@@ -1,1 +1,1 @@
-This the landing page for my website. Ig you can look around or whatever. If you copy my work at least credit me.
+This the static code for my website (that doesn't exist yet). Ig you can look around or whatever.
