@@ -1,0 +1,287 @@
+/* ============ Global Styles ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+    line-height: 1.4;
+    color: #000;
+    background-color: #f3f3f5;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+/* ============ Navigation ============ */
+.navbar {
+    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #5a6db3;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* ============ Section Titles ============ */
+.section-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-align: left;
+    color: #23387a;
+    position: relative;
+    font-weight: bold;
+}
+
+.section-title::after {
+    content: '';
+    display: none;
+}
+
+/* ============ Buttons ============ */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: none;
+    border: 1px solid #6b7fd8;
+    cursor: pointer;
+    font-size: 15px;
+    background: #e3d7f0;
+    color: #4a3a6b;
+}
+
+.btn-primary {
+    background: #6b7a94;
+    color: white;
+    border: 1px solid #5a6983;
+}
+
+.btn-primary:hover {
+    background: #5a6983;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-secondary {
+    background: #d1d1d8;
+    color: #23387a;
+    border: 1px solid #c1c1c8;
+}
+
+.btn-secondary:hover {
+    background: #c1c1c8;
+    color: #23387a;
+    transform: none;
+}
+
+/* ============ Projects Section ============ */
+.projects {
+    padding: 20px 0;
+    background: #f3f3f5;
+    font-size: 15px;
+}
+
+.filter-buttons {
+    display: none;
+}
+
+.filter-btn {
+    padding: 4px 10px;
+    border: 1px solid #999;
+    background: #ddd;
+    color: #000;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: none;
+    font-size: 12px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ccc;
+    color: #000;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.project-card {
+    background: #eaeaef;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: none;
+    cursor: default;
+    opacity: 1;
+    animation: none;
+    border-left: 3px solid #8b9ab3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card:hover {
+    transform: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: #dcdce3;
+}
+
+.project-image {
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b9ab3;
+    font-size: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.project-content {
+    padding: 0;
+    display: flex-grow;
+    flex: 1;
+}
+
+.project-title {
+    font-size: 15px;
+    margin-bottom: 2px;
+    color: #23387a;
+    font-weight: bold;
+}
+
+.project-category {
+    display: none;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.project-link {
+    display: none;
+}
+
+/* ============ Footer ============ */
+.footer {
+    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+    margin-top: auto;
+    border-top: 2px solid #5a6db3;
+    font-size: 13px;
+}
+
+/* ============ Responsive Design ============ */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+
+    .nav-brand {
+        font-size: 15px;
+    }
+}
