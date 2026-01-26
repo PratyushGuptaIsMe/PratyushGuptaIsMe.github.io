@@ -43,11 +43,11 @@ const projects = [
     }
 ];
 
-const projectsGrid1 = document.getElementById('projectsGrid3');
+const projectsGrid = document.getElementById('projectsGrid');
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (projectsGrid1) {
-        renderProjects(projectsGrid1);
+    if (projectsGrid) {
+        renderProjects(projectsGrid);
     }
 });
 
