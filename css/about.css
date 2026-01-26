@@ -73,6 +73,7 @@
     background: #284767;
     color: white;
     border: 1px solid #1A2A3A;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {

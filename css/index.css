@@ -108,6 +108,7 @@
     background: #1B6480;
     color: white;
     border: 1px solid #0E314A;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {
@@ -120,6 +121,7 @@
     background: #A2B0B9;
     color: #1B6480;
     border: 1px solid #7E93A0;
+    border-radius: 4px;
 }
 
 .btn-secondary:hover {
