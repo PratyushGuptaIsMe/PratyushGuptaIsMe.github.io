@@ -1,13 +1,12 @@
 
 
-/* ============ Navigation ============ */
 .navbar {
-    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
+    background: linear-gradient(135deg, #1A2A3A 0%, #284767 100%);
     padding: 8px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #5a6db3;
+    border-bottom: 2px solid #1B6480;
 }
 
 .navbar .container {
@@ -42,12 +41,11 @@
     text-decoration: underline;
 }
 
-/* ============ Section Titles ============ */
 .section-title {
     font-size: 22px;
     margin-bottom: 12px;
     text-align: left;
-    color: #23387a;
+    color: #1B6480;
     position: relative;
     font-weight: bold;
 }
@@ -57,7 +55,6 @@
     display: none;
 }
 
-/* ============ Buttons ============ */
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -65,41 +62,40 @@
     text-decoration: none;
     font-weight: normal;
     transition: none;
-    border: 1px solid #6b7fd8;
+    border: 1px solid #284767;
     cursor: pointer;
     font-size: 15px;
-    background: #e3d7f0;
-    color: #4a3a6b;
+    background: #7E93A0;
+    color: white;
 }
 
 .btn-primary {
-    background: #6b7a94;
+    background: #284767;
     color: white;
-    border: 1px solid #5a6983;
+    border: 1px solid #1A2A3A;
 }
 
 .btn-primary:hover {
-    background: #5a6983;
+    background: #1A2A3A;
     transform: none;
     box-shadow: none;
 }
 
 .btn-secondary {
-    background: #d1d1d8;
-    color: #23387a;
-    border: 1px solid #c1c1c8;
+    background: #7E93A0;
+    color: white;
+    border: 1px solid #284767;
 }
 
 .btn-secondary:hover {
-    background: #c1c1c8;
-    color: #23387a;
+    background: #1B6480;
+    color: white;
     transform: none;
 }
 
-/* ============ About Section ============ */
 .about {
     padding: 20px 0;
-    background: #f3f3f5;
+    background: #D9E3EB;
     font-size: 15px;
 }
 
@@ -108,23 +104,23 @@
     gap: 0;
     align-items: start;
     margin-bottom: 15px;
-    background: #eaeaef;
+    background: #E8ECEF;
     padding: 12px;
-    border-left: 3px solid #8b9ab3;
+    border-left: 3px solid #284767;
     border-radius: 2px;
 }
 
 .about-text p {
     font-size: 15px;
     margin-bottom: 10px;
-    color: #000;
+    color: #0E1A24;
     line-height: 1.4;
 }
 
 .skills h3 {
-    font-size: 17px;
+    font-size: 20.2px;
     margin-bottom: 8px;
-    color: #23387a;
+    color: #1B6480;
     font-weight: bold;
 }
 
@@ -136,7 +132,7 @@
 
 .skill-tag {
     display: inline-block;
-    background: #8b9ab3;
+    background: #5f7c8f;
     color: white;
     padding: 3px 8px;
     border-radius: 3px;
@@ -145,34 +141,57 @@
     border: 0;
 }
 
-/* ============ CTA Section ============ */
 .cta-section {
     padding: 15px 0;
     text-align: left;
-    background: #eaeaef;
+    background: #E8ECEF;
     padding: 12px;
     margin: 15px 0;
-    border-left: 3px solid #8b9ab3;
+    border-left: 3px solid #284767;
 }
 
 .cta-text {
     font-size: 15px;
-    color: #000;
+    color: #1B6480;
     margin-bottom: 10px;
 }
 
-/* ============ Footer ============ */
-.footer {
-    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
-    color: white;
-    text-align: left;
-    padding: 10px 15px;
-    margin-top: auto;
-    border-top: 2px solid #5a6db3;
-    font-size: 13px;
+.cta-text a {
+    color: #1B6480;
+    text-decoration: underline;
+    font-weight: normal;
 }
 
-/* ============ Responsive Design ============ */
+.cta-text a:hover {
+    color: #1B6480;
+    text-decoration: underline;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: inline;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: inline;
+}
+
+.footer p a {
+    display: inline;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 12px;

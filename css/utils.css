@@ -8,11 +8,21 @@ html, body {
     height: 100%;
 }
 
+.footer {
+    background: linear-gradient(135deg, #1A2A3A 0%, #284767 100%);
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+    margin-top: auto;
+    border-top: 2px solid #1B6480;
+    font-size: 13px;
+}
+
 body {
     font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
     line-height: 1.4;
-    color: #000;
-    background-color: #f3f3f5;
+    color: #0E1A24;
+    background-color: #E8ECEF;
     font-size: 15px;
     display: flex;
     flex-direction: column;

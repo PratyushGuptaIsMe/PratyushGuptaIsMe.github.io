@@ -1,14 +1,10 @@
-/* ============ Global Styles ============ */
-
-
-/* ============ Navigation ============ */
 .navbar {
-    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
+    background: linear-gradient(135deg, #1A2A3A 0%, #284767 100%);
     padding: 8px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #5a6db3;
+    border-bottom: 2px solid #1B6480;
 }
 
 .navbar .container {
@@ -43,12 +39,11 @@
     text-decoration: underline;
 }
 
-/* ============ Section Titles ============ */
 .section-title {
     font-size: 22px;
     margin-bottom: 12px;
     text-align: left;
-    color: #23387a;
+    color: #0E314A;
     position: relative;
     font-weight: bold;
 }
@@ -58,7 +53,6 @@
     display: none;
 }
 
-/* ============ Buttons ============ */
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -66,41 +60,40 @@
     text-decoration: none;
     font-weight: normal;
     transition: none;
-    border: 1px solid #6b7fd8;
+    border: 1px solid #284767;
     cursor: pointer;
     font-size: 15px;
-    background: #e3d7f0;
-    color: #4a3a6b;
+    background: #5e7888;
+    color: white;
 }
 
 .btn-primary {
-    background: #6b7a94;
+    background: #284767;
     color: white;
-    border: 1px solid #5a6983;
+    border: 1px solid #1A2A3A;
 }
 
 .btn-primary:hover {
-    background: #5a6983;
+    background: #1A2A3A;
     transform: none;
     box-shadow: none;
 }
 
 .btn-secondary {
-    background: #d1d1d8;
-    color: #23387a;
-    border: 1px solid #c1c1c8;
+    background: #7E93A0;
+    color: white;
+    border: 1px solid #284767;
 }
 
 .btn-secondary:hover {
-    background: #c1c1c8;
-    color: #23387a;
+    background: #1B6480;
+    color: white;
     transform: none;
 }
 
-/* ============ Projects Section ============ */
 .projects {
     padding: 20px 0;
-    background: #f3f3f5;
+    background: #D9E3EB;
     font-size: 15px;
 }
 
@@ -133,7 +126,7 @@
 }
 
 .project-card {
-    background: #eaeaef;
+    background: #E8ECEF;
     border-radius: 2px;
     overflow: hidden;
     box-shadow: none;
@@ -141,7 +134,7 @@
     cursor: default;
     opacity: 1;
     animation: none;
-    border-left: 3px solid #8b9ab3;
+    border-left: 3px solid #284767;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -171,7 +164,7 @@
 .project-card:hover {
     transform: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    background: #dcdce3;
+    background: #7E93A0;
 }
 
 .project-image {
@@ -181,7 +174,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8b9ab3;
+    color: #284767;
     font-size: 18px;
     margin-right: 10px;
     flex-shrink: 0;
@@ -202,7 +195,7 @@
 .project-title {
     font-size: 15px;
     margin-bottom: 2px;
-    color: #23387a;
+    color: #1B6480;
     font-weight: bold;
 }
 
@@ -211,7 +204,7 @@
 }
 
 .project-description {
-    color: #666;
+    color: #4A5A6A;
     line-height: 1.4;
     margin-bottom: 0;
     font-size: 13px;
@@ -221,18 +214,31 @@
     display: none;
 }
 
-/* ============ Footer ============ */
-.footer {
-    background: linear-gradient(135deg, #5b7fd8 0%, #6b8dd8 100%);
+.footer a {
     color: white;
-    text-align: left;
-    padding: 10px 15px;
-    margin-top: auto;
-    border-top: 2px solid #5a6db3;
-    font-size: 13px;
+    text-decoration: none;
+    display: inline;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
 }
 
-/* ============ Responsive Design ============ */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: inline;
+}
+
+.footer p a {
+    display: inline;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 12px;
