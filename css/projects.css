@@ -1,34 +1,5 @@
 /* ============ Global Styles ============ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
-    line-height: 1.4;
-    color: #000;
-    background-color: #f3f3f5;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 15px;
-    width: 100%;
-}
 
 /* ============ Navigation ============ */
 .navbar {
@@ -126,69 +97,128 @@ main {
     transform: none;
 }
 
-/* ============ About Section ============ */
-.about {
+/* ============ Projects Section ============ */
+.projects {
     padding: 20px 0;
     background: #f3f3f5;
     font-size: 15px;
 }
 
-.about-content {
-    display: block;
-    gap: 0;
-    align-items: start;
-    margin-bottom: 15px;
-    background: #eaeaef;
-    padding: 12px;
-    border-left: 3px solid #8b9ab3;
-    border-radius: 2px;
+.filter-buttons {
+    display: none;
 }
 
-.about-text p {
-    font-size: 15px;
-    margin-bottom: 10px;
+.filter-btn {
+    padding: 4px 10px;
+    border: 1px solid #999;
+    background: #ddd;
     color: #000;
-    line-height: 1.4;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: none;
+    font-size: 12px;
 }
 
-.skills h3 {
-    font-size: 17px;
-    margin-bottom: 8px;
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ccc;
+    color: #000;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.project-card {
+    background: #eaeaef;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: none;
+    cursor: default;
+    opacity: 1;
+    animation: none;
+    border-left: 3px solid #8b9ab3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card:hover {
+    transform: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: #dcdce3;
+}
+
+.project-image {
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b9ab3;
+    font-size: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.project-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.project-content {
+    padding: 0;
+    display: flex-grow;
+    flex: 1;
+}
+
+.project-title {
+    font-size: 15px;
+    margin-bottom: 2px;
     color: #23387a;
     font-weight: bold;
 }
 
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+.project-category {
+    display: none;
 }
 
-.skill-tag {
-    display: inline-block;
-    background: #8b9ab3;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-weight: normal;
+.project-description {
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 0;
     font-size: 13px;
-    border: 0;
 }
 
-/* ============ CTA Section ============ */
-.cta-section {
-    padding: 15px 0;
-    text-align: left;
-    background: #eaeaef;
-    padding: 12px;
-    margin: 15px 0;
-    border-left: 3px solid #8b9ab3;
-}
-
-.cta-text {
-    font-size: 15px;
-    color: #000;
-    margin-bottom: 10px;
+.project-link {
+    display: none;
 }
 
 /* ============ Footer ============ */
@@ -213,12 +243,12 @@ main {
         font-size: 13px;
     }
 
-    .about-content {
-        display: block;
-    }
-
     .section-title {
         font-size: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -230,6 +260,11 @@ main {
     .nav-links {
         flex-direction: row;
         gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 3px 8px;
+        font-size: 12px;
     }
 
     .nav-brand {

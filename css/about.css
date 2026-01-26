@@ -1,34 +1,4 @@
-/* ============ Global Styles ============ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
-    line-height: 1.4;
-    color: #000;
-    background-color: #f3f3f5;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 15px;
-    width: 100%;
-}
 
 /* ============ Navigation ============ */
 .navbar {
@@ -72,56 +42,19 @@ main {
     text-decoration: underline;
 }
 
-/* ============ Hero Section ============ */
-.hero {
-    background: #f3f3f5;
-    color: #000;
-    padding: 40px 0;
-    text-align: left;
-    min-height: auto;
-    display: block;
-    border-bottom: 2px solid #d1d1d8;
-}
-
-.hero-content {
-    animation: none;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-title {
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #23387a;
-}
-
-.hero-subtitle {
-    font-size: 19px;
-    margin-bottom: 8px;
-    color: #6b7a94;
-}
-
-.hero-description {
-    font-size: 15px;
+/* ============ Section Titles ============ */
+.section-title {
+    font-size: 22px;
     margin-bottom: 12px;
-    color: #333;
+    text-align: left;
+    color: #23387a;
+    position: relative;
+    font-weight: bold;
 }
 
-.hero-buttons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    flex-wrap: wrap;
+.section-title::after {
+    content: '';
+    display: none;
 }
 
 /* ============ Buttons ============ */
@@ -163,39 +96,69 @@ main {
     transform: none;
 }
 
-/* ============ Section Titles ============ */
-.section-title {
-    font-size: 22px;
-    margin-bottom: 12px;
-    text-align: left;
+/* ============ About Section ============ */
+.about {
+    padding: 20px 0;
+    background: #f3f3f5;
+    font-size: 15px;
+}
+
+.about-content {
+    display: block;
+    gap: 0;
+    align-items: start;
+    margin-bottom: 15px;
+    background: #eaeaef;
+    padding: 12px;
+    border-left: 3px solid #8b9ab3;
+    border-radius: 2px;
+}
+
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000;
+    line-height: 1.4;
+}
+
+.skills h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
     color: #23387a;
-    position: relative;
     font-weight: bold;
 }
 
-.section-title::after {
-    content: '';
-    display: none;
-}
-
-/* ============ Contact Section ============ */
-.contact {
-    padding: 20px 0;
-    background: white;
-    text-align: left;
-}
-
-.contact-text {
-    font-size: 13px;
-    color: #000;
-    margin-bottom: 12px;
-}
-
-.contact-buttons {
+.skill-tags {
     display: flex;
-    justify-content: flex-start;
-    gap: 8px;
     flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #8b9ab3;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 13px;
+    border: 0;
+}
+
+/* ============ CTA Section ============ */
+.cta-section {
+    padding: 15px 0;
+    text-align: left;
+    background: #eaeaef;
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 3px solid #8b9ab3;
+}
+
+.cta-text {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 /* ============ Footer ============ */
@@ -215,43 +178,23 @@ main {
         font-size: 12px;
     }
 
-    .hero-title {
-        font-size: 18px;
-    }
-
-    .hero-subtitle {
-        font-size: 14px;
-    }
-
     .nav-links {
         gap: 10px;
         font-size: 13px;
     }
 
+    .about-content {
+        display: block;
+    }
+
     .section-title {
         font-size: 20px;
-    }
-
-    .contact-buttons {
-        flex-direction: row;
-    }
-
-    .hero-buttons {
-        flex-direction: row;
     }
 }
 
 @media (max-width: 480px) {
     body {
         font-size: 12px;
-    }
-
-    .hero-title {
-        font-size: 18px;
-    }
-
-    .hero-subtitle {
-        font-size: 14px;
     }
 
     .nav-links {

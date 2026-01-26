@@ -1,15 +1,15 @@
 // Project data
 const projects = [
     {
-        id: 1,
+        type: "emoji",
         title: "Bad Apple Checkerboard",
         category: "creative",
         description: "A creative visualization project using checkerboard patterns to create animated effects inspired by Bad Apple.",
         emoji: "🎨",
-        link: "#"
+        link: "https://google.com"
     },
     {
-        id: 2,
+        type: "emoji",
         title: "Soundboard",
         category: "web",
         description: "An interactive soundboard application with multiple sound effects and responsive controls.",
@@ -17,7 +17,7 @@ const projects = [
         link: "#"
     },
     {
-        id: 3,
+        type: "emoji",
         title: "Web Portfolio",
         category: "web",
         description: "A modern and responsive portfolio website showcasing projects and skills.",
@@ -25,7 +25,7 @@ const projects = [
         link: "#"
     },
     {
-        id: 4,
+        type: "emoji",
         title: "Image to Array Converter",
         category: "creative",
         description: "Python script that converts images to 2D arrays for creative coding and visualization projects.",
@@ -33,7 +33,7 @@ const projects = [
         link: "#"
     },
     {
-        id: 5,
+        type: "emoji",
         title: "Refresh Rate Checker",
         category: "web",
         description: "Web tool to check and display your monitor's refresh rate and visual capabilities.",
@@ -41,7 +41,7 @@ const projects = [
         link: "#"
     },
     {
-        id: 6,
+        type: "emoji",
         title: "Creative Coding Experiments",
         category: "creative",
         description: "A collection of experimental projects exploring creative coding with visual effects and animations.",
@@ -51,76 +51,41 @@ const projects = [
 ];
 
 // DOM Elements
-const projectsGrid = document.getElementById('projectsGrid');
-const filterButtons = document.querySelectorAll('.filter-btn');
-let currentFilter = 'all';
+const projectsGrid1 = document.getElementById('projectsGrid3');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    if (projectsGrid) {
-        renderProjects(projects);
+    if (projectsGrid1) {
+        renderProjects(projectsGrid1);
     }
-    setupSmoothScroll();
 });
 
 // Render projects
-function renderProjects(projectsToRender) {
-    if (!projectsGrid) return;
+function renderProjects(grid) {
+    if (!grid) {
+        return
+    };
     
-    projectsGrid.innerHTML = '';
+    grid.innerHTML = '';
     
-    projectsToRender.forEach((project, index) => {
+    projects.forEach((project) => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card';
-        projectCard.style.animationDelay = `${index * 0.1}s`;
+        const mediaContent = project.type === 'emoji' 
+            ? `${project.emoji}`
+            : `<img src="${project.image}" alt="${project.title}" class="project-icon">`;
         projectCard.innerHTML = `
+        <a href="${project.link}">
             <div class="project-image">
-                ${project.emoji}
+                ${mediaContent}
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
             </div>
+        </a>
         `;
         
-        projectsGrid.appendChild(projectCard);
+        grid.appendChild(projectCard);
     });
 }
-
-// Setup smooth scrolling
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-// Add scroll animation for elements
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe project cards on load
-setTimeout(() => {
-    document.querySelectorAll('.project-card').forEach(card => {
-        observer.observe(card);
-    });
-}, 100);
