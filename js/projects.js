@@ -1,5 +1,5 @@
 const projects = [
-    /* image/emoji */
+    /* images/emoji */
     {
         type: "emoji",
         title: "Bad Apple on a checkerboard",
