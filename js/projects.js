@@ -1,45 +1,26 @@
 const projects = [
+    /* image/emoji */
     {
         type: "emoji",
-        title: "Bad Apple Checkerboard",
-        description: "A creative visualization project using checkerboard patterns to create animated effects inspired by Bad Apple.",
+        title: "Bad Apple on a checkerboard",
+        description: "Animating the Bad Apple music video on a checkerboard. A checkerboard is only 8x8 so it is a little unique to say the least.",
         emoji: "🎨",
-        link: "https://google.com"
+        image: "",
+        link: "https://pratyushguptaisme.github.io/bad-apple-checkerboard/"
     },
     {
         type: "emoji",
-        title: "Soundboard",
-        description: "An interactive soundboard application with multiple sound effects and responsive controls.",
-        emoji: "🔊",
-        link: "#"
+        title: "A shooting game",
+        description: "A random shooting game I made. I learned web animation by building this. This tooke me 6 months 😵‍💫.",
+        emoji: "🔫",
+        link: "https://pratyushguptaisme.github.io/shooting-game/"
     },
     {
         type: "emoji",
-        title: "Web Portfolio",
-        description: "A modern and responsive portfolio website showcasing projects and skills.",
-        emoji: "💼",
-        link: "#"
-    },
-    {
-        type: "emoji",
-        title: "Image to Array Converter",
-        description: "Python script that converts images to 2D arrays for creative coding and visualization projects.",
-        emoji: "🖼️",
-        link: "#"
-    },
-    {
-        type: "emoji",
-        title: "Refresh Rate Checker",
-        description: "Web tool to check and display your monitor's refresh rate and visual capabilities.",
-        emoji: "⚡",
-        link: "#"
-    },
-    {
-        type: "emoji",
-        title: "Creative Coding Experiments",
-        description: "A collection of experimental projects exploring creative coding with visual effects and animations.",
-        emoji: "✨",
-        link: "#"
+        title: "Fractal art generator",
+        description: "Use it to create your own randomly generated cool-looking fractal art. Many customizers and stuff.",
+        emoji: "⏹️",
+        link: "https://pratyushguptaisme.github.io/fractalgenerator"
     }
 ];
 
