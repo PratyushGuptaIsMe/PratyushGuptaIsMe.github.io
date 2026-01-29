@@ -13,6 +13,7 @@ const projects = [
         title: "A shooting game",
         description: "A random shooting game I made. I learned web animation by building this. This tooke me 6 months 😵‍💫.",
         emoji: "🔫",
+        image: "",
         link: "https://pratyushguptaisme.github.io/shooting-game/"
     },
     {
@@ -20,7 +21,16 @@ const projects = [
         title: "Fractal art generator",
         description: "Use it to create your own randomly generated cool-looking fractal art. Many customizers and stuff.",
         emoji: "⏹️",
-        link: "https://pratyushguptaisme.github.io/fractalgenerator"
+        image: "",
+        link: "https://pratyushguptaisme.github.io/fractalgenerator/"
+    },
+    {
+        type: "emoji",
+        title: "Aim Trainer",
+        description: "A simple click the shape aim trainer made in js.",
+        emoji: "⏹️",
+        image: "",
+        link: "https://pratyushguptaisme.github.io/aim-trainer/"
     }
 ];
 
